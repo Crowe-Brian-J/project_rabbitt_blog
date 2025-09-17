@@ -1,3 +1,5 @@
+import { Home, Info, Mail } from 'lucide-react'
+
 const posts = [
   {
     title: 'Post One',
@@ -23,24 +25,27 @@ const Header = () => {
         Rabbitt Blog
       </div>
 
-      <nav className="space-x-4">
+      <nav className="flex gap-6 items-right">
         <a
-          href="#"
+          href="/"
+          aria-label="Home"
           className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
         >
-          Home
+          <Home className="text-zinc-400 hover:text-zinc-200" size={22} />
         </a>
         <a
           href="#"
+          aria-label="About"
           className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
         >
-          About
+          <Info className="text-zinc-400 hover:text-zinc-200" size={22} />
         </a>
         <a
           href="#"
+          aria-label="Contact"
           className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
         >
-          Contact
+          <Mail className="text-zinc-400 hover:text-zinc-200" size={22} />
         </a>
       </nav>
     </header>
@@ -60,7 +65,7 @@ const Footer = () => {
 }
 
 const PostCard = ({ title, excerpt, date, image }) => (
-  <article className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 w-full max-w-2xl mx-auto flex">
+  <article className="bg-gray-800 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 w-full max-w-2xl mx-auto flex">
     {/* Left-side image */}
     <img
       src={image}
@@ -70,18 +75,18 @@ const PostCard = ({ title, excerpt, date, image }) => (
 
     {/* Text content */}
     <div className="flex flex-col justify-between">
-      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+      <h3 className="text-xl font-bold text-rose-400 dark:text-rose-400">
         {title}
       </h3>
-      <p className="text-gray-700 dark:text-gray-300 mb-2">{excerpt}</p>
-      <span className="text-sm text-gray-500 dark:text-gray-400">{date}</span>
+      <p className="text-slate-300 dark:text-slate-300 mb-2">{excerpt}</p>
+      <span className="text-sm text-amber-200 dark:text-amber-200">{date}</span>
     </div>
   </article>
 )
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-neutral-400 text-gray-900 dark:text-gray-100 flex flex-col">
+    <div className="min-h-screen bg-neutral-400 dark:bg-neutral-400 text-gray-900 dark:text-gray-100 flex flex-col">
       <Header />
 
       <section className="w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white py-20 px-6 flex flex-col items-center text-center">

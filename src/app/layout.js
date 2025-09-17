@@ -1,14 +1,15 @@
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Recursive } from 'next/font/google'
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
+const recursive = Recursive({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-recursive'
+  // You can specify variable axes like weight, casual, mono, etc.
+  // For example, to include specific weights:
+  // weight: ['300', '400', '700'],
+  // Or to use the variable font features:
+  // variable: '--font-recursive', // Define a CSS variable for use with Tailwind CSS
 })
 
 export const metadata = {
@@ -19,9 +20,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${recursive.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
