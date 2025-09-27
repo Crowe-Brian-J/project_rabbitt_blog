@@ -1,12 +1,10 @@
-import Header from './Header'
-import Footer from './Footer'
-import PostCard from './PostCard'
+import Layout from './Layout'
 import Hero from './Hero'
-import posts from '@/data/posts'
+import PostCard from './PostCard'
+import posts from '../data/posts'
 
 const HomePage = () => (
-  <div className="min-h-screen bg-neutral-400 dark:bg-gray-900 text-gray-800 dark:text-gray-100 flex flex-col">
-    <Header />
+  <Layout>
     <Hero />
     <main
       className="flex flex-col items-center flex-grow px-4 py-8 w-full"
@@ -27,8 +25,7 @@ const HomePage = () => (
           ))}
       </div>
     </main>
-    <Footer />
-  </div>
+  </Layout>
 )
 
 export default HomePage
