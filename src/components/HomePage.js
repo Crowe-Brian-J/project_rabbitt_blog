@@ -2,27 +2,7 @@ import Header from './Header'
 import Footer from './Footer'
 import PostCard from './PostCard'
 import Hero from './Hero'
-
-const posts = [
-  {
-    title: 'Post One',
-    excerpt: 'This is a short description of the first post.',
-    date: 'Sep 16, 2025',
-    image: '/example1.jpg'
-  },
-  {
-    title: 'Post Two',
-    excerpt: "Here's a teaser for the second post.",
-    date: 'Sep 15, 2025',
-    image: '/example2.jpg'
-  },
-  {
-    title: 'Post Three',
-    excerpt: 'A brief look at what the third post is about.',
-    date: 'Sep 14, 2025',
-    image: '/example3.jpg'
-  }
-]
+import posts from '@/data/posts'
 
 const HomePage = () => (
   <div className="min-h-screen bg-neutral-400 dark:bg-gray-900 text-gray-800 dark:text-gray-100 flex flex-col">
